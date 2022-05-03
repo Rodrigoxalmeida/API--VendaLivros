@@ -45,7 +45,7 @@ public class Venda implements Serializable{
 	
 	public Venda() {
 		super();
-		addLocal(LocalVenda.LOJA);
+		
 	}
 
 	public Venda(Integer id, String titulo,String autor, String codigo, Double preco,String descricao, LocalDate dataVenda) {
@@ -57,7 +57,7 @@ public class Venda implements Serializable{
 		this.preco = preco;
 		this.descricao = descricao;
 		this.dataVenda = dataVenda;
-		addLocal(LocalVenda.LOJA);
+		
 	}
 	
 	public Venda(VendaDTO obj) {
@@ -69,7 +69,7 @@ public class Venda implements Serializable{
 		this.preco = obj.getPreco();
 		this.descricao = obj.getDescricao();
 		this.localVenda = obj.getLocalVenda().stream().map(x -> x.getCodigo()).collect(Collectors.toSet());
-		addLocal(LocalVenda.LOJA);
+		
 	}	
 
 	public Integer getId() {

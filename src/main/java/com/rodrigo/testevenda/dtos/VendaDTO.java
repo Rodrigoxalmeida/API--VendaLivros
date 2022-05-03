@@ -33,7 +33,7 @@ public class VendaDTO implements Serializable{
 	
 	public VendaDTO() {
 		super();
-		addLocal(LocalVenda.LOJA);
+		
 	}
 	
 	public VendaDTO(Venda venda) {
@@ -45,7 +45,7 @@ public class VendaDTO implements Serializable{
 		this.preco = venda.getPreco();
 		this.descricao = venda.getDescricao();
 		this.localVenda = venda.getLocalVenda().stream().map(x -> x.getCodigo()).collect(Collectors.toSet());
-		addLocal(LocalVenda.LOJA);
+		
 	}	
 
 	public Integer getId() {
